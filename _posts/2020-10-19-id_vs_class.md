@@ -1,5 +1,5 @@
 ---
-title: [HTML] id vs class
+title: "[HTML] id vs class"
 date: 2020-10-19 21:00:00 -0400
 summary: id와 class를 비교해보자
 ---

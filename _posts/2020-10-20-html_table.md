@@ -18,7 +18,6 @@ html의 tag를 이용하여 table을 만들 수 있습니다.
 
 tr, td, th를 사용해서 간단한 2x3 table을 만들어 보겠습니다.
 
-2 x 3 table
 
 ```html
   <table>
@@ -57,7 +56,7 @@ td, th tag에 rowspan, colspan 속성을 사용해서 행과 열의 병합을 �
 
 > colspan="병합할 열 개수" : 열 병합
 
-열 병합 적용 html 코드
+아래는 열 병합 적용 html 코드입니다.
 
 ```html
  <table class="my_table">

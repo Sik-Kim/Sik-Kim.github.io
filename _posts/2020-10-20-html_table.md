@@ -35,7 +35,7 @@ th : td와 역할은 같으나 자동으로 bold, 가운데 정렬이 적용된�
 
 
 
-![html_table]({{ site.baseurl }}/img/2020-10-20/table1.png)
+![html_table](./img/2020-10-20/table1.png)
 
 
 
@@ -71,7 +71,7 @@ colspan="병합할 열 개수" : 열 병합
 
 
 
-![html_table]({{ site.baseurl }}/img/2020-10-20/table2.png)
+![html_table](./img/2020-10-20/table2.png)
 
 
 <br>

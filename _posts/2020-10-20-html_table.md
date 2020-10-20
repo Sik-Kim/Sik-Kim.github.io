@@ -10,11 +10,13 @@ summary: table 만드는 방법
 
 html의 tag를 이용하여 table을 만들 수 있습니다.
 
-tr(table row) : row 생성
+> tr(table row) : row 생성
 
-td(table data) : table 내 data 생성, column 갯수 결정
+> td(table data) : table 내 data 생성, column 갯수 결정
 
-th : td와 역할은 같으나 자동으로 bold, 가운데 정렬이 적용된다.
+> th : td와 역할은 같으나 자동으로 bold, 가운데 정렬이 적용된다.
+
+tr, td, th를 사용해서 간단한 2x3 table을 만들어 보겠습니다.
 
 2 x 3 table
 
@@ -33,6 +35,8 @@ th : td와 역할은 같으나 자동으로 bold, 가운데 정렬이 적용된�
   </table>
 ```
 
+<br>
+
 table 결과
 
 ![table](/img/2020-10-20/table1.png)
@@ -47,9 +51,13 @@ html로만 table을 작성하면 위와 같은 결과가 나오는데 뭔가 밋
 
 ### table 병합하기
 
-rowspan="병합할 행 개수" : 행 병합
+td, th tag에 rowspan, colspan 속성을 사용해서 행과 열의 병합을 할 수 있습니다.
 
-colspan="병합할 열 개수" : 열 병합
+> rowspan="병합할 행 개수" : 행 병합
+
+> colspan="병합할 열 개수" : 열 병합
+
+열 병합 적용 html 코드
 
 ```html
  <table class="my_table">
@@ -77,6 +85,8 @@ colspan="병합할 열 개수" : 열 병합
       </table>
 ```
 
+<br>
+
 table 결과
 
 ![table](/img/2020-10-20/table2.png)
@@ -102,6 +112,8 @@ th{
   text-align: left;
 }
 ```
+
+<br>
 
 css 적용 결과
 

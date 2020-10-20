@@ -33,9 +33,11 @@ th : td와 역할은 같으나 자동으로 bold, 가운데 정렬이 적용된�
   </table>
 ```
 
+table 결과
 
 ![table](/img/2020-10-20/table1.png)
 
+html로만 table을 작성하면 위와 같은 결과가 나오는데 뭔가 밋밋하다. 따라서 css로 가로,세로선 등 table에 대한 속성을 입혀줘야 합니다.
 
 
 
@@ -58,6 +60,12 @@ colspan="병합할 열 개수" : 열 병합
         <th>3pm</th>
       </tr>
       <tr>
+        <th>Gym</th>
+        <td>Dodge ball</td>
+        <td>Kick boxing</td>
+        <td>Sack racing</td>
+      </tr>
+      <tr>
         <th>Exercise Room</th>
         <td>Spinning</td>
         <td colspan="2" class="my_td">Yoga marathon</td>
@@ -69,23 +77,18 @@ colspan="병합할 열 개수" : 열 병합
       </table>
 ```
 
+table 결과
+
 ![table](/img/2020-10-20/table2.png)
 
-
-
 <br>
-
 <br>
 
 ### table에 css 적용하기
 
-일반 text와 마찬가지로 css selector로 tag(tr, td, th)를 주거나 class를 설정해주면 된다.
+일반 text와 마찬가지로 tag(tr, td, th)나 class로 css selector를 설정하여 css를 적용할 수 있습니다.
 
 ```css
-.border-table th, .border-table td {
-  border: 1px solid black; 
-}
-
 .my_table th, .my_table td {
   border: 1px solid black;
 }
@@ -99,4 +102,8 @@ th{
   text-align: left;
 }
 ```
+
+css 적용 결과
+
+![table](/img/2020-10-20/table3.png)
 

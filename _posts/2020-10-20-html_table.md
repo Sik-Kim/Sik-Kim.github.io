@@ -35,9 +35,7 @@ th : td와 역할은 같으나 자동으로 bold, 가운데 정렬이 적용된�
 
 
 
-| Row 1, column 1 | Row 1, column 2 | Row 1, column 3 |
-| --------------- | --------------- | --------------- |
-| Row 2, column 1 | Row 2, column 2 | Row 2, column 3 |
+![html_table]({{ site.baseurl }}/img/2020-10-20/table1.png)
 
 
 
@@ -73,13 +71,7 @@ colspan="병합할 열 개수" : 열 병합
 
 
 
-
-|               | 1pm        | 2pm           | 3pm  |
-| ------------- | ---------- | ------------- | ---- |
-| Exercise Room | Spinning   | Yoga marathon |      |
-| Pool          | Water polo |               |      |
-
-
+![html_table]({{ site.baseurl }}/img/2020-10-20/table2.png)
 
 
 <br>

@@ -51,7 +51,8 @@ CSS Selector는 tag나 attribute(속성)에 따라 표현법이 다릅니다.
 
 Selector로 tag + class명 or tag + id명을 결합해서 사용할 수도 있습니다.
 
-p tag 내부의 "p-tag" 이름의 class를 selector로 지정
+p tag 내부의 "p-tag" 이름의 class를 selector로 지정  
+(tag -> class)
 
 > ```css
 > p.p-tag {
@@ -61,7 +62,8 @@ p tag 내부의 "p-tag" 이름의 class를 selector로 지정
 
 
 
-"p" tag 내부의 "third-line" 이름의 id를 selector로 지정
+p tag 내부의 "third-line" 이름의 id를 selector로 지정  
+(tag -> id)
 
 > ```css
 > p#third-line {
@@ -76,7 +78,8 @@ p tag 내부의 "p-tag" 이름의 class를 selector로 지정
 
 반대로 class + tag 순서로 selector를 지정할 수도 있습니다.
 
-"pre" 이름의 class 내 span tag를 selector로 지정
+"pre" 이름의 class 내 span tag를 selector로 지정  
+(class -> tag)
 
 > ```css
 > .pre span {
@@ -93,7 +96,8 @@ p tag 내부의 "p-tag" 이름의 class를 selector로 지정
 
 좀 더 극단적으로 selector를 만든다면 이런식으로도 작성할 수 있습니다.
 
-"a" 이름의 class 내 div tag 내 "b" 이름의 class 내 "pre" 이름의 class 내 span tag를 selector로 준 것입니다.
+"a" 이름의 class 내 div tag 내 "b" 이름의 class 내 "pre" 이름의 class 내 span tag를 selector로 준 것입니다.  
+(class -> tag -> class -> class -> tag)
 
 > ```css
 > .a div .b .pre span {

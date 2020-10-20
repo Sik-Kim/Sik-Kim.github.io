@@ -9,7 +9,7 @@ summary: id와 class를 비교해보자
 
 ### HTML Tag 속성인 id와 class의 기능과 차이점
 
-id와 class 둘다 태그에 이름을 주는 속성입니다.
+id와 class 둘 다 태그에 이름을 주는 속성입니다.
 
 <br>
 

@@ -1,7 +1,7 @@
 ---
-title: "Arguments & Parameter 개념 정복 (feat. Variable Length Arguments)"
+title: "Function Arguments 개념 정복"
 date: 2020-10-22 23:36:00 -0400
-summary: positional arguments, keyword arguments, default value parameter, variable length arguments(positional, keyword)
+summary: positional arguments, keyword arguments, default value parameter, variable length arguments(positional, keyword) 등 정리
 ---
 
 

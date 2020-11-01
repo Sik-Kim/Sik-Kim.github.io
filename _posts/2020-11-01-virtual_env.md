@@ -52,29 +52,33 @@ category : miniconda
 
 1. conda 가상환경 만들기(여기서는 test_env라는 이름의 가상환경을 만든다.)
 > conda create -n test_env python=3.7
+
 ![conda1](https://i.ibb.co/h8y2kjc/move1.gif)
 
 2. 가상환경 확인
 설치된 모든 가상환경 리스트를 보여준다.
 > conda env list
+
 ![conda2](https://i.ibb.co/T4kh9Wm/condaenvlist.png)
 
 3. 만든 가상환경 실행하기
 가상환겨을 실행하면 Terminal에서 (base)로 되어 있던 것이 (test_env)로 바뀌는 것을 확인 할 수 있다.
 > conda activate test_env
+
 ![conda3](https://i.ibb.co/gWv10zx/condaactivatetestenv.png)
 
 4. 프레임워크(장고) 설치
 > pip install django
+
 ![conda4](https://i.ibb.co/TkGKRVh/pipinstalldjango.png)
 
 5. 설치 확인
 > pip freeze
+
 ![conda5](https://i.ibb.co/KKb9QCp/pipfreee.png)
 
 무사히 가상환경 세팅 및 장고 설치까지 해봤다. 1개의 프로젝트에 1개의 가상환경이 있는 것이며, 프로젝트명과 가상환경명을 동일하게 하는걸 추천드린다. 프로젝트 시작할때는 일단 가상환경부터 키고 시작하는 것이라 생각하면 된다.
 
-<br>
 
 6. 가상환경 종료
 > pip deactivate
@@ -84,4 +88,4 @@ category : miniconda
 예를 들어 위에서 만든 test_env 가상환경을 삭제하려면 아래와 같은 명령어를 입력하면 된다.
 > conda env remove -n test_env
 
-하지만 가끔 위 명령어로 삭제되지 않을때도 있다. 그럴땐 권장하는 방법은 아니지만 conda env list로 확인가능한 경로를 따라가서 직접 삭제하는 방법도 있긴하니 조심히 사용하길 바란다. 하지말란건 안하는게 좋더라...
+하지만 가끔 위 명령어로 삭제되지 않을때도 있다. 그럴땐 권장하는 방법은 아니지만 conda env list로 확인가능한 경로를 따라가서 직접 삭제하는 방법도 있긴하니 조심히 사용하길 바란다.

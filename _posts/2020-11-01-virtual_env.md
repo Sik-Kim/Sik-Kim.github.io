@@ -3,8 +3,14 @@ title: "파이썬 가상환경 구축하기(Miniconda 설치)"
 date: 2020-11-01 20:49:00 -0400
 summary: 파이썬 가상환경, conda 명령어 익히기
 toc : ture
-tag : miniconda conda env pip 가상환경
-category : miniconda
+toc_sticky: true
+comments: true
+tag : 
+    - miniconda
+    - conda
+    - 가상환경
+category : 
+    - miniconda
 ---
 
 # 파이썬 패키지 설치 프로그램

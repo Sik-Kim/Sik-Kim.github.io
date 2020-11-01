@@ -31,7 +31,7 @@ category : miniconda
 # 가상환경(Virtual Environments)
 가상환경은 파이썬의 프로젝트마다 독립적으로 가상의 환경에 모듈을 설치하는 것이다.  
 
-가상환경을 Bubble에 비유하기도 한다. 가상환경으로 모듈을 관리하면 프로젝트마다 별도의 패키지/라이브러리를 가질 수 있다.
+쉽게 생각해보자. 가상환경을 Bubble에 비유하기도 한다. **Bubble과 같이 분리된 각각의 Project에 적용되는 각각의 가상환경이 있는 것이다.**  
 반면 PIP으로 모듈을 설치하면 프로젝트 구분없이 파이썬에 Global하게 설치가 되어 프로젝트별로 모듈이 동일하게 설치되며 여러 프로젝트를 진행하거나 장기간 프로젝트를 할 시 모듈의 Version이 꼬일 가능성이 높다.
 
 ![bubble](https://i.ibb.co/6mRWZN7/bubble.png)
@@ -50,40 +50,51 @@ category : miniconda
 
 그럼 conda를 통해서 my_test_env라는 가상환경을 만들고 django 설치까지 진행해보겠다.
 
-1. conda 가상환경 만들기(여기서는 test_env라는 이름의 가상환경을 만든다.)
+1) conda 가상환경 만들기(여기서는 test_env라는 이름의 가상환경을 만든다.)
 > conda create -n test_env python=3.7
 
 ![conda1](https://i.ibb.co/h8y2kjc/move1.gif)
 
-2. 가상환경 확인
+<br>
+
+2) 가상환경 확인
 설치된 모든 가상환경 리스트를 보여준다.
 > conda env list
 
 ![conda2](https://i.ibb.co/T4kh9Wm/condaenvlist.png)
 
-3. 만든 가상환경 실행하기
+<br>
+
+3) 만든 가상환경 실행하기
 가상환겨을 실행하면 Terminal에서 (base)로 되어 있던 것이 (test_env)로 바뀌는 것을 확인 할 수 있다.
 > conda activate test_env
 
 ![conda3](https://i.ibb.co/gWv10zx/condaactivatetestenv.png)
 
-4. 프레임워크(장고) 설치
+<br>
+
+4) 프레임워크(장고) 설치
 > pip install django
 
 ![conda4](https://i.ibb.co/TkGKRVh/pipinstalldjango.png)
 
-5. 설치 확인
+<br>
+
+5) 설치 확인
 > pip freeze
 
 ![conda5](https://i.ibb.co/KKb9QCp/pipfreee.png)
 
 무사히 가상환경 세팅 및 장고 설치까지 해봤다. 1개의 프로젝트에 1개의 가상환경이 있는 것이며, 프로젝트명과 가상환경명을 동일하게 하는걸 추천드린다. 프로젝트 시작할때는 일단 가상환경부터 키고 시작하는 것이라 생각하면 된다.
 
+<br>
 
-6. 가상환경 종료
+6) 가상환경 종료
 > pip deactivate
 
-7. 가상환경 삭제
+<br>
+
+7) 가상환경 삭제
 기본적으로 가상환경 삭제는 명령어를 사용하면 된다.
 예를 들어 위에서 만든 test_env 가상환경을 삭제하려면 아래와 같은 명령어를 입력하면 된다.
 > conda env remove -n test_env

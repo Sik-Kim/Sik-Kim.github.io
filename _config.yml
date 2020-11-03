@@ -11,141 +11,143 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme: 'mmistakes/minimal-mistakes'
-minimal_mistakes_skin: 'default' # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: 'en-US'
-title: 'Sik-Kim'
-title_separator: '-'
-subtitle: # site tagline that appears below site title in masthead
-name: 'Jeongsik Kim'
-description: 'An amazing website.'
-url: 'https://Sik-Kim.github.io' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl: '' # the subpath of your site, e.g. "/blog"
-repository: # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute: 200
+locale                   : "ko-KR"
+title                    : "Mengs"
+title_separator          : "-"
+subtitle                 : "common fangirl" # site tagline that appears below site title in masthead
+name                     : "Hyunji Kim"
+description              : "맨날 까먹어서 기록하는 블로그"
+url                      : "https://guswnl0610.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+repository               : "guswnl0610/guswnl0610.github.com" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "/assets/images/teaserimg.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "Mengs blog" # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true # true, false (default)
+words_per_minute         : 200
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : guswnl0610 # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
-    server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    appid:
-    num_posts: # 5 (default)
-    colorscheme: # "light" (default), "dark"
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
   utterances:
-    theme: # "github-light" (default), "github-dark"
-    issue_term: # "pathname" (default)
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
   staticman:
-    branch: # "master"
-    endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
 reCaptcha:
-  siteKey:
-  secret:
+  siteKey                :
+  secret                 :
 atom_feed:
-  path: # blank (default) uses feed.xml
-search: # true, false (default)
-search_full_content: # true, false (default)
-search_provider: # lunr (default), algolia, google
+  path                   : # blank (default) uses feed.xml
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : # lunr (default), algolia, google
 algolia:
-  application_id: # YOUR_APPLICATION_ID
-  index_name: # YOUR_INDEX_NAME
-  search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
-  powered_by: # true (default), false
+  application_id         : # YOUR_APPLICATION_ID
+  index_name             : # YOUR_INDEX_NAME
+  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             : # true (default), false
 google:
-  search_engine_id: # YOUR_SEARCH_ENGINE_ID
-  instant_search: # false (default), true
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), true
 # SEO Related
-google_site_verification:
-bing_site_verification:
-yandex_site_verification:
-naver_site_verification:
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username:
+  username               :
 facebook:
-  username:
-  app_id:
-  publisher:
-og_image: # Open Graph/Twitter default site image
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type: # Person or Organization (defaults to Person)
-  name: # If the user or organization name differs from the site's name
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
 # Analytics
 analytics:
-  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id:
-    anonymize_ip: # true, false (default)
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
+
 
 # Site Author
 author:
-  name: 'Jeongsik Kim'
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: 'I am an **amazing** person.'
-  location: 'Republic of Korea'
-  email:
+  name             : "Hyunji Kim"
+  avatar           : "/assets/images/profilepic.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "common fangirl"
+  location         : "Republic of Korea"
+  email            : # "guswnl0610@gmail.com"
   links:
-    - label: 'Email'
-      icon: 'fas fa-fw fa-envelope-square'
-      url: "mailto:summering6@gmail.com"
-    - label: 'Website'
-      icon: 'fas fa-fw fa-link'
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:guswnl0610@gmail.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
-    - label: 'Twitter'
-      icon: 'fab fa-fw fa-twitter-square'
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
-    - label: 'Facebook'
-      icon: 'fab fa-fw fa-facebook-square'
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: 'GitHub'
-      icon: 'fab fa-fw fa-github'
-      url: "https://github.com/Sik-Kim"
-    - label: 'Instagram'
-      icon: 'fab fa-fw fa-instagram'
-      url: "https://www.instagram.com/salvame21/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/guswnl0610"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
-    - label: 'Twitter'
-      icon: 'fab fa-fw fa-twitter-square'
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
       # url:
-    - label: 'Facebook'
-      icon: 'fab fa-fw fa-facebook-square'
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
       # url:
-    - label: 'GitHub'
-      icon: 'fab fa-fw fa-github'
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/guswnl0610"
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
       # url:
-    - label: 'GitLab'
-      icon: 'fab fa-fw fa-gitlab'
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: 'Bitbucket'
-      icon: 'fab fa-fw fa-bitbucket'
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
       # url:
-    - label: 'Instagram'
-      icon: 'fab fa-fw fa-instagram'
-      # url:
+
 
 # Reading Files
 include:
   - .htaccess
   - _pages
 exclude:
-  - '*.sublime-project'
-  - '*.sublime-workspace'
+  - "*.sublime-project"
+  - "*.sublime-workspace"
   - vendor
   - .asset-cache
   - .bundle
@@ -173,8 +175,9 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: 'utf-8'
-markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
 
 # Conversion
 markdown: kramdown
@@ -182,6 +185,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+
 
 # Markdown Processing
 kramdown:
@@ -194,16 +198,19 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
 
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
 
 # Plugins (previously gems:)
 plugins:
@@ -220,6 +227,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+
 
 # Archives
 #  Type
@@ -249,6 +257,7 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
@@ -256,16 +265,25 @@ compress_html:
   ignore:
     envs: development
 
+
 # Defaults
 defaults:
   # _posts
   - scope:
-      path: ''
+      path: ""
       type: posts
     values:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+  
+  #_pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true

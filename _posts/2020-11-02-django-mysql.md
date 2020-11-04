@@ -1,7 +1,7 @@
 ---
-title: "장고 mysql 연동(models.py 작성하여 table 만들기)"
+title: "Django Starbucks Page Clone ⎜ models.py 작성"
 date: 2020-11-02 07:52:00 -0400
-summary: 장고 models.py, settings.py 작성
+summary: 이 summary는 화면 어디서 나오지???
 toc : ture
 toc_sticky: true
 comments: true
@@ -15,36 +15,42 @@ category :
 
 # 실습 내용
 
-django를 사용해서 data를 만들어 mysql에 연동하는 것을 해보도록 하겠다. 지난번 ERD 모델링을 만들었던 starbucks 페이지의 데이터로 실습을 하려한다.
+django를 사용해서 data를 만들어 mysql에 연동하는 것을 해보도록 하겠다. 지난번 ERD 모델링을 만들었던 starbucks 페이지의 데이터로 실습을 하려한다.  
 [https://sik-kim.github.io/database/database/](https://sik-kim.github.io/database/database/)
 
+<br><br>
+
 # 환경 세팅
-장고 프로젝트 시작까지 환경 세팅 해줘야 할게 너무 많다.
+장고 프로젝트 시작까지 환경 세팅 해줘야 할게 너무 많다. 하나씩 해보도록 하자.
 
 
 ## 가상환경 설치(miniconda 사용)
-지난번 글을 참조하면 된다.
+지난번 가상환경 관련 포스팅을 참조하면 된다.  
 [https://sik-kim.github.io/miniconda/virtual_env/](https://sik-kim.github.io/miniconda/virtual_env/)
 
 ## 모듈 설치
 
 **장고 설치**
 > $ pip install django
+
 **장고 cors 설정**
 > $ pip install django-cors-headers
+
 **MySQL server에 접속하기 위한 package(mysql 설치 후 설치할 것)**
 > $ pip install mysqlclient
 
+<br><br>
 
 # 장고 세팅
 
 ## 장고 프로젝트 생성
-> $ django-admin startproject westarbucks
+> $ django-admin startproject westarbucks  
 > $ cd westarbucks
 
 ## 앱 생성(앱 이름 : products)
 > $ python manage.py startapp products
 
+<br>
 
 ## setting.py 설정
 ### IP 허용
@@ -53,7 +59,7 @@ ALLOWED_HOSTS = ['*']
 ```
 
 ### APP 설정
-사진유첨
+![setting.py_apps]https://i.ibb.co/5kbmnQM/settings-py-apps.png
 
 ### westarbucks/urls.py 수정
 ```python
@@ -63,12 +69,18 @@ urlpatterns = [
 ]
 ```
 
-## Database 생성(mysql명 : starbucks_db)
-> $ mysql.server start
-> $ mysql -u root -p
+## Database 세팅 
+
+### mysql server 시작
+> $ mysql.server start  
+
+### mysql database root 권한으로 실행
+> $ mysql -u root -p  
+
+### 새로운 database 생성 (mysql명 : starbucks_db)
 > mysql> create database starbucks_db character set utf8mb4 collate utf8mb4_general_ci;
 
-## setting.py 설정 (Database 연동)
+### setting.py 설정 (Database 연동)
 ```python
 DATABASES = {
     'default' : {
@@ -82,7 +94,11 @@ DATABASES = {
 }
 ```
 
+<br><br>
+
 # models.py 작성
+models.py는 장고와 database(mysql)간의 연동을 가능하게 해준다. **models.py에서 작성한 코드가 database table의 뼈대가 되는 것이다.** table의 칼럼명, 자료형, 제한사항, PK, FK 등에 대한 정보를 작성을 하게된다.
+
 ```python
 from django.db import models
 
@@ -131,17 +147,18 @@ class Allergy_Product(models.Model):
         allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE)
 
 ```
+<br><br>
 
 # python shell 작성
-
+models.py에서 작성한 코드가 database table의 뼈대라면 python shell에서는 table 뼈대 안에 들어갈 내용을 작성할 수 있다. 아래와 같이 진행해보자.
 
 ## python shell 진입
-> python manage.py shell
+> python manage.py shell  
 
-> from products.models import Menu, Category, Product, Nutritions
 
 ## models.py에 작성한 Class import
-> from products.models import Menu, Category, Product, Nutritions, Images, Sizes, Allergy, Allergy_Product
+python shell에 진입할 때마다 필요한 Class를 import 해줘야 한다.
+> from products.models import Menu, Category, Product, Nutritions
 
 
 ## table 작성
@@ -156,13 +173,15 @@ class Allergy_Product(models.Model):
 > a3.save()
 
 **bulk_create()**
->>> a1 = Men(name="음료")
->>> a2 = Menu(name="푸드") 
->>> Menu.objects.bulk_create([a1, a2])
+> a1 = Men(name="음료")  
+> a2 = Menu(name="푸드")  
+> Menu.objects.bulk_create([a1, a2])
 
 **Nutritions table 입력**
 
-a1 = Product.objects.get(name="나이트로 바닐라 크림")
+a1 = Product.objects.get(name="나이트로 바닐라 크림")  
+
+
 Nutritions.objects.create(one_serving_kca=75, sodium_mg = 20, saturated_fat_g = 2, sugars_g = 10, protein_g = 1, caffeine_mg = 245, product = a1)
 
 **Images table 입력**
@@ -195,7 +214,12 @@ b1 = Allergy.objects.get(id=1)
 
 Allergy_Product.objects.create(product=a1, allergy=b1)
 
+<br><br>
 
 # 결과 확인
+
+![starbucks_table](https://i.ibb.co/MPMVJBQ/starbucks-table.jpg)
+
+<br><br>
 
 # 보안해야 할 점

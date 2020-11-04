@@ -24,7 +24,7 @@ description: '기록하는 백엔드 개발자'
 url: 'https://guswnl0610.github.io/' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: 'https://github.com/Sik-Kim/Sik-Kim.github.io' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser: '/img/avatar.jpg' # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser: '/img/avatar2.jpg' # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: 'Sik-Kim' # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs: true # true, false (default)
@@ -93,7 +93,7 @@ analytics:
 # Site Author
 author:
   name: 'Jeongsik Kim'
-  avatar: '/img/avatar.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: '/img/avatar2.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: '개발꿈나무'
   location: 'Republic of Korea'
   email: # "guswnl0610@gmail.com"

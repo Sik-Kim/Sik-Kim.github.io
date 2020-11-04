@@ -14,6 +14,7 @@ category :
 ---
 
 # 실습 내용
+
 django를 사용해서 data를 만들어 mysql에 연동하는 것을 해보도록 하겠다. 지난번 ERD 모델링을 만들었던 starbucks 페이지의 데이터로 실습을 하려한다.
 [https://sik-kim.github.io/database/database/](https://sik-kim.github.io/database/database/)
 

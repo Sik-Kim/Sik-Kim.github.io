@@ -223,3 +223,5 @@ Allergy_Product.objects.create(product=a1, allergy=b1)
 <br><br>
 
 # 보안해야 할 점
+- QuerySet 작성 연습
+- Django Documentation과 친해지기

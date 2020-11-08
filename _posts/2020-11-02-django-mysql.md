@@ -15,13 +15,13 @@ category :
 
 # 실습 내용
 
-django를 사용해서 data를 만들어 mysql에 연동하는 것을 해보도록 하겠다. 지난번 ERD 모델링을 만들었던 starbucks 페이지의 데이터로 실습을 하려한다.  
+django와 mysql을 연동하고 실제로 table을 만들고 data까지 넣어보도록 하겠다. 지난번 ERD 모델링을 만들었던 starbucks 페이지로 실습을 하려한다.  
 [https://sik-kim.github.io/database/database/](https://sik-kim.github.io/database/database/)
 
 <br><br>
 
 # 환경 세팅
-장고 프로젝트 시작까지 환경 세팅 해줘야 할게 너무 많다. 하나씩 해보도록 하자.
+개발의 시작은 환경 세팅이 아니던가. 하나씩 해보도록 하자.
 
 
 ## 가상환경 설치(miniconda 사용)
@@ -41,8 +41,6 @@ django를 사용해서 data를 만들어 mysql에 연동하는 것을 해보도�
 
 <br><br>
 
-# 장고 세팅
-
 ## 장고 프로젝트 생성
 > $ django-admin startproject westarbucks  
 > $ cd westarbucks
@@ -52,14 +50,17 @@ django를 사용해서 data를 만들어 mysql에 연동하는 것을 해보도�
 
 <br>
 
+# 장고 Setting 및 Database 연동
+
 ## setting.py 설정
+
 ### IP 허용
 ```python
 ALLOWED_HOSTS = ['*']
 ```
 
 ### APP 설정
-![setting.py_apps]https://i.ibb.co/5kbmnQM/settings-py-apps.png
+![setting.py_apps](https://i.ibb.co/5kbmnQM/settings-py-apps.png)
 
 ### westarbucks/urls.py 수정
 ```python
@@ -69,6 +70,8 @@ urlpatterns = [
 ]
 ```
 
+<br>
+
 ## Database 세팅 
 
 ### mysql server 시작
@@ -77,10 +80,10 @@ urlpatterns = [
 ### mysql database root 권한으로 실행
 > $ mysql -u root -p  
 
-### 새로운 database 생성 (mysql명 : starbucks_db)
+### database 생성 (mysql명 : starbucks_db)
 > mysql> create database starbucks_db character set utf8mb4 collate utf8mb4_general_ci;
 
-### setting.py 설정 (Database 연동)
+### database 연동 (setting.py 에 작성)
 ```python
 DATABASES = {
     'default' : {
@@ -96,7 +99,15 @@ DATABASES = {
 
 <br><br>
 
-# models.py 작성
+자.. 드디어 모든 환경 세팅이 끝났다...
+
+<br>
+
+![zzal_start]("https://i.ibb.co/6XZZb3v/zzal-start.jpg")
+
+<br>
+
+# Django - models.py 작성
 models.py는 장고와 database(mysql)간의 연동을 가능하게 해준다. **models.py에서 작성한 코드가 database table의 뼈대가 되는 것이다.** table의 칼럼명, 자료형, 제한사항, PK, FK 등에 대한 정보를 작성을 하게된다.
 
 ```python
@@ -149,21 +160,25 @@ class Allergy_Product(models.Model):
 ```
 <br><br>
 
-# python shell 작성
-models.py에서 작성한 코드가 database table의 뼈대라면 python shell에서는 table 뼈대 안에 들어갈 내용을 작성할 수 있다. 아래와 같이 진행해보자.
+# python shell을 통한 database에 data 입력
+models.py에 작성한 코드로 database table의 뼈대(column명)은 구축했다. 이제는 table 속성 안에 들어갈 실제 data를 넣어보자.  
+python shell을 통해 직접 넣어 볼 수 있다.
+(혼자 공부할때나 이렇게 data를 CRUD 하는 것이지 실제 프로젝트에서는 이런식으로 할일이 없으니 data 안 날려먹게 유의하자!)
 
 ## python shell 진입
 > python manage.py shell  
 
 
 ## models.py에 작성한 Class import
-python shell에 진입할 때마다 필요한 Class를 import 해줘야 한다.
+python shell에 진입할 때마다 필요한 Class를 import 해줘야 한다. (python shell에 진입할 때 마다 import 해주는 것을 잊지 말자.)
 > from products.models import Menu, Category, Product, Nutritions
 
 
 ## table 작성
 
-**Menu table 입력**  
+<br>
+
+### Menu table에 Data 입력
 
 **create() 사용**  
 > Menu.objects.create(name="음료")
@@ -177,34 +192,36 @@ python shell에 진입할 때마다 필요한 Class를 import 해줘야 한다.
 > a2 = Menu(name="푸드")  
 > Menu.objects.bulk_create([a1, a2])
 
-**Nutritions table 입력**
+### Nutritions table에 Data 입력
 
-a1 = Product.objects.get(name="나이트로 바닐라 크림")  
+**참조값이 있을 시 임시로 쓸 변수(a1)에 참조하는 Model(Product)의 인스턴스를 넣는다.**
 
+> a1 = Product.objects.get(name="나이트로 바닐라 크림")  
 
-Nutritions.objects.create(one_serving_kca=75, sodium_mg = 20, saturated_fat_g = 2, sugars_g = 10, protein_g = 1, caffeine_mg = 245, product = a1)
+**위에서 지정한 a1 인스턴스와 함께 Nutritions data값을 만든다.**
+> Nutritions.objects.create(one_serving_kca=75, sodium_mg = 20, saturated_fat_g = 2, sugars_g = 10, protein_g = 1, caffeine_mg = 245, product = a1)
 
-**Images table 입력**
+### Images table에 Data 입력
 
 a1 = Product.objects.get(name="나이트로 바닐라 크림")
 
 Images.objects.create(image_url="[https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002487](https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002487)", product = a1)
 
 
-**Sizes table 입력**
+### Size table에 Data 입력
 
 a1 = Nutritions.objects.get(id=1)
 
 Sizes.objects.create(name="Tall(톨)", size_ml="355ml", size_fluid_ounce="12 fl oz", nutrition = a1)
 
 
-**Allergy table 입력**
+**Allergy table에 Data 입력**
 
 
 
 Allergy.objects.create(name="우유")
 
-**Allergy_product table 입력(N:N 가운데 table)**
+**Allergy_product table에 Data 입력(N:N Table의 가운데 table)**
 
 
 

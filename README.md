@@ -1,2 +1,2 @@
-# guswnl0610.github.com
+# Sik-Kim.github.com
 gitblog

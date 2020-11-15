@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guswnl0610.github.io/sitemap.xml
+Sitemap: https://Sik-Kim.github.io/sitemap.xml

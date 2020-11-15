@@ -27,7 +27,7 @@ instagram 댓글을 구현하며 처음으로 내가 쓴 코드라는 생각이 
 <br>
 
 모델링을 생각해보고 참조값, 예외처리 등 코드에 필요한 내용을 노트에 쭉 써보니 뭔가 정리가 되는 느낌이였다.  
-아 코드는 이렇게 짜는 거구나 하는 느낌이 왔다. ~~차각은 자유라고..~~
+아 코드는 이렇게 짜는 거구나 하는 느낌이 왔다. ~~차각은 자유니까..~~
 
 <br>
 
@@ -43,8 +43,8 @@ instagram 댓글을 구현하며 처음으로 내가 쓴 코드라는 생각이 
 
 ## models.py
 
-model은 비교적 간단하다. 참조하는 table이 2개가 있다.  
-ForeignKey 갈호안 참조하는 Class명을 넣을 때 보통 ''를 써줬는데 import를 하니 ''없이도 참조가 가능했다.
+model은 비교적 간단하게 만들었다.  
+ForeignKey로 참조하는 Class명을 넣을 때 보통 ''를 써줬는데 import를 해주면 '' 안써줘도 참조가 가능하다.
 
 ```python
 from django.db import models
@@ -71,11 +71,11 @@ class Comment(models.Model):
 
 views.py를 작성할 때는 코드의 흐름을 정확하게 이해하기 위해서 코드 한줄마다 print문을 찍어보았다.  
 print문으로 코드를 조목조목 상세하게 살펴보는게 코드를 이해하고 에러를 파악하는데 엄청 도움이 되었다.
-(이번 instagram만 print문 좀 사용할게요...)
+(코드컨벤션 무시하고 싶은건 아닌데... 이번 instagram만 print문 좀 쓰려구요...)
 
-참조키를 어떻게 적용할지가 매번 어려웠었다.
-우선 user정보는 미리 만든 로그인 데코레이터를 이용해서 쉽게 해결했다.
-그리고 image_url 참조값은 data로 넣은 url과 일치하면서 로그인 인증한 user 정보를 이용해 데이터 값을 찾았다.
+참조키를 어떻게 가져와서 적용할지가 매번 어려웠었다.
+우선 user정보는 미리 만든 로그인 데코레이터에 이미 request.user로 속성을 만든게 있어 쉽게 해결했다.
+그리고 image_url 참조값은 이미 가지고 있는 user 정보와 request로 요청할 image_url를 이용하여 데이터 값을 찾았다.
 
 ```python
 
@@ -122,7 +122,7 @@ class CommentView(View):
 ## login_decorator
 데코레이터는 따로 포스팅을 할 생각으로 별도로 언급하지 않고 코드만 넣어두겠다.
 데코레이터도 코드 분석을 위해 print문을 잔득 넣어뒀다..
-(데코레이터와 지지고 볶은 사연도 말하자면 어휴....)
+(데코레이터와 지지고 볶은 사연도 어휴....)
 
 ```python
 import jwt
@@ -188,6 +188,7 @@ comment='Good night!!!!'
 <br>
 
 ## Terminal 화면
+Terminal 화면에 보이는 success 라는 문구가 주는 희열이란....(끄덕 끄덕)
 
 ![terminal](https://i.ibb.co/gy3HpFv/message.png)
 

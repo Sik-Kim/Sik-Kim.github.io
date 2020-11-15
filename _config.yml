@@ -21,7 +21,7 @@ title_separator: '-'
 subtitle: '개발꿈나무' # site tagline that appears below site title in masthead
 name: 'Jeongsik Kim'
 description: '기록하는 백엔드 개발자'
-url: 'https://guswnl0610.github.io/' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: 'https://Sik-Kim.github.io/' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: 'https://github.com/Sik-Kim/Sik-Kim.github.io' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: '/img/avatar2.jpeg' # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -96,7 +96,7 @@ author:
   avatar: '/img/avatar2.jpeg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: '개발꿈나무'
   location: 'Republic of Korea'
-  email: # "guswnl0610@gmail.com"
+  email: # "summering6@gmail.com"
   links:
     - label: 'Email'
       icon: 'fas fa-fw fa-envelope-square'
@@ -128,7 +128,7 @@ footer:
       # url:
     - label: 'GitHub'
       icon: 'fab fa-fw fa-github'
-      url: 'https://github.com/guswnl0610'
+      url: 'https://github.com/Sik-Kim'
     - label: 'GitLab'
       icon: 'fab fa-fw fa-gitlab'
       # url:

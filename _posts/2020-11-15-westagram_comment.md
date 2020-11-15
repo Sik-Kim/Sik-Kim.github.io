@@ -12,6 +12,9 @@ tag :
     - comment
 category : 
     - django
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 # instagram 댓글 구현하기

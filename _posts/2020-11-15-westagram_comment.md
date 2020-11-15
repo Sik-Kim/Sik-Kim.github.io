@@ -6,6 +6,7 @@ toc : ture
 toc_sticky: true
 comments: true
 tag : 
+    - TIL
     - django
     - instagram
 category : 
@@ -14,19 +15,21 @@ category :
 
 # instagram 댓글 구현하기
 
-<br><br>
+<br>
 
 ## Preview
-instagram 댓글 기능을 구현하며 어느정도 스스로 코드를 짰다는 생각이 들었다!! 이런기분 처음이야..  
+instagram 댓글을 구현하며 처음으로 내가 쓴 코드라는 생각이 들었다.  
 회원가입, 로그인, 인증/인가 등 이전에는 다른 코드를 참조하며 억지로 코드를 만들고 그 코드를 이해하기 바빴다.  
 **하지만 이번엔 무작정 코드를 쓰기 시작하기 전에 나도 생각이란걸 했다.**
 
 ![think zzal](https://i.ibb.co/B6LZj0w/think.jpg)
 
+<br>
+
 모델링을 생각해보고 참조값, 예외처리 등 코드에 필요한 내용을 노트에 쭉 써보니 뭔가 정리가 되는 느낌이였다.  
 아 코드는 이렇게 짜는 거구나 하는 느낌이 왔다. ~~차각은 자유라고..~~
 
-<br><br>
+<br>
 
 ## 댓글 구현을 위해 고려한 점
 1. ERD diagram(model, type)
@@ -36,7 +39,7 @@ instagram 댓글 기능을 구현하며 어느정도 스스로 코드를 짰다�
 5. 예외 처리에는 무엇이 있는지.
 6. 참조값 적용 방안
 
-<br><br>
+<br>
 
 ## models.py
 
@@ -62,7 +65,7 @@ class Comment(models.Model):
 
 ```
 
-<br><br>
+<br>
 
 ## views.py
 
@@ -114,7 +117,7 @@ class CommentView(View):
             return JsonResponse({"message": f"{ex}"}, status=400)
 ```
 
-<br><br>
+<br>
 
 ## login_decorator
 데코레이터는 따로 포스팅을 할 생각으로 별도로 언급하지 않고 코드만 넣어두겠다.
@@ -170,7 +173,7 @@ def login_decorator(original_function):
 
 ```
 
-<br><br>
+<br>
 
 ## request 내용
 httpie 프로그램을 사용해서 request를 서버로 전송했다.
@@ -182,7 +185,7 @@ image_url='https://i.ibb.co/6XZZb3v/zzal-start.jpg'
 comment='Good night!!!!'
 ```
 
-<br><br>
+<br>
 
 ## Terminal 화면
 
@@ -195,7 +198,7 @@ comment='Good night!!!!'
 
 
 
-<br><br>
+<br>
 
 ## Database Table(Mysql)
 여러번 request 하다보니 중복된 data 많은점 유의..

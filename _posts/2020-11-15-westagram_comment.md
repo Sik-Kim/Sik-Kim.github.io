@@ -186,7 +186,8 @@ httpie 프로그램을 사용해서 request를 서버로 전송했다.
 우선 login decorator를 이용한 로그인 인증을 위해 access token인 Authorization를 포함했다. 그리고 posting의 user와 image_url과 comment 내용을 담았다.
 
 ```
-http -v POST 127.0.0.1:8000/posting/comment Authorization:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50IjoiamVubnkifQ.vcObfkUOTTovDXl-B-f7K8uS6DeaF7d1bbExDyBPx1s' user_of_posting='salvame21' 
+http -v POST 127.0.0.1:8000/posting/comment Authorization:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50IjoiamVubnkifQ.vcObfkUOTTovDXl-B-f7K8uS6DeaF7d1bbExDyBPx1s'  
+user_of_posting='salvame21' 
 image_url='https://i.ibb.co/6XZZb3v/zzal-start.jpg' 
 comment='Good night!!!!'
 ```

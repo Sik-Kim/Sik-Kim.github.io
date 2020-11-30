@@ -22,7 +22,6 @@ category :
 ## 작업 기간
 2020.11.16 ~ 2020.11.27
 
-<br>
 
 ## 기술 스택
 
@@ -30,15 +29,11 @@ category :
 - HTTP
 - Git
 
-<br>
-
 ### 프론트엔드 (2명)
 - HTML/CSS
 - JavaScript
 - React
 - SASS
-
-<br>
 
 ### 백엔드 (3명)
 - Python
@@ -50,8 +45,6 @@ category :
 - Selenium
 - Beautiful soup
 - AWS EC2, RDS
-
-<br>
 
 ### Tool
 - Aquerytool
@@ -77,15 +70,15 @@ category :
 ## 결과 화면(주요 담당 부분에 대한 간략한 설명)
 
 ### 1. ERD Modeling
-order, orderlist table 작성시 가장 고민이 많았다.
+order, orderlist table에 대한 고민이 가장 많았다.
 
 ##
 ![erd](https://i.ibb.co/pPgc6sr/erd-trandi.png)
 
 <br>
 
-아래는 프로젝트와 관련없는 일반적인 table modeling이다.  
-처음에는 이런식으로 장바구니 테이블(wish_lists)을 주문 테이블(Shopping_Carts, Order_Items)와 별도로 만들어 주려고 했지만 우리는 따로 만들지 않고 하나로 합쳐줬다. 즉, Order, Orderlist 2개 table로 장바구니와 주문 모두 담아냈다.
+아래는 프로젝트와 관련없는 일반적인 order 관련 table modeling이다.  
+처음에는 이런식으로 장바구니 테이블(wish_lists)을 주문 테이블(Shopping_Carts, Order_Items)와 별도로 만들어 주려고 했지만 우리는 따로 만들지 않고 하나로 합쳐줬다. 즉, Order, Orderlist 2개 table로 장바구니와 주문 모두 담아냈다. table을 합쳐 table이 간단해지는 대신 views.py 작성은 좀 더 어려워졌다.
 
 <br>
 
@@ -94,10 +87,10 @@ order, orderlist table 작성시 가장 고민이 많았다.
 <br>
 
 ### 2. 리뷰 CRUD
-#### C : 텍스트, 별점, 이미지(선택), 유저정보(선택) 입력 기능
-#### R : Product Detail View에 포함하여 화면 출력, order_by를 이용하여 최신순 정렬 설정
-#### U : user 인증 후 일부 내용
-#### D : user 인증 후 삭제
+- C : 텍스트, 별점, 이미지(선택), 유저정보(선택) 입력 기능
+- R : Product Detail View에 포함하여 화면 출력, order_by를 이용하여 최신순 정렬 설정
+- U : user 인증 후 일부 내용
+- D : user 인증 후 삭제
 
 <br>
 
@@ -110,10 +103,10 @@ order, orderlist table 작성시 가장 고민이 많았다.
 <br>
 
 ### 3. 오더리스트(장바구니) CRUD
-#### C : 장바구니 선택 시 orderlist(장바구니), order(주문) table을 동시에 생성하는 것이 포인트였다. 그리고 동일한 상품의 장바구니가 있을 때는 수량만 증가 시키고 주문 정보는 결제 전인 주문 정보가 없을 때만 만들어주는 예외처리를 넣어줬다. 배송비 계산 함수를 포함했다.
-#### R : select_related를 사용하여 쿼리수를 3자리수에서 2개로 줄일 수 있었다.
-#### U : user, quantity 에러 처리를 해줬고 배송비 계산 함수를 포함했다.
-#### D : 장바구니가 완전히 비어질 때는 주문정보도 동시에 삭제해줬다. C, U와 마찬가지로 배송비 계산 함수를 포함해줬다.
+- C : 장바구니 선택 시 orderlist(장바구니), order(주문) table을 동시에 생성하는 것이 포인트였다. 그리고 동일한 상품의 장바구니가 있을 때는 수량만 증가 시키고 주문 정보는 결제 전인 주문 정보가 없을 때만 만들어주는 예외처리를 넣어줬다. 배송비 계산 함수를 포함했다.
+- R : select_related를 사용하여 쿼리수를 3자리수에서 2개로 줄일 수 있었다.
+- U : user, quantity 에러 처리를 해줬고 배송비 계산 함수를 포함했다.
+- D : 장바구니가 완전히 비어질 때는 주문정보도 동시에 삭제해줬다. C, U와 마찬가지로 배송비 계산 함수를 포함해줬다.
 
 <br>
 
@@ -131,7 +124,6 @@ order, orderlist table 작성시 가장 고민이 많았다.
 - [ ]  Scrum - 스크럼 진행 방식에 대해서 이해했고 Trello 와 같은 tool 을 활용하여 스크럼 방식 아래 프로젝트 진행할 수 있다. **- O**
 - [ ]  Standup Meeting - 매일 아침 미팅을 통해 어제 한 일, 오늘 할 일, blocker 세 가지를 공유하며 팀원들과 미팅을 진행할 수 있다. **- O**
 - [ ]  Communication - 팀원들과 소통이 필요한 경우 올바른 방법을 통해 의견을 주고 받으며 조율할 수 있다. **- O**
-
 - [ ]  Git - 기본적인 Flow에 따라 Git을 사용할 수 있으며, brach를 생성하고 올바른 이름과 내용을 commit message를 작성할 수 있다. **- O**
 - [ ]  문제 해결 능력 - 모르는 과제를 마주하는 경우 Google 검색, stackoverflow 등을 활용하여 문제를 해결할 수 있다. **- O**
 - [ ]  Q&A - 스스로 문제 해결이 잘 안 되는 경우, 혹은 누군가가 도움을 요청하는 경우 동기, 혹은 멘토와 올바른 방법으로 질문과 대답을 주고 받을 수 있다. **- O**

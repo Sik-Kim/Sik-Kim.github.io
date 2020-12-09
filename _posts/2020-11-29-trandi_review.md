@@ -1,5 +1,5 @@
 ---
-title: "Django ⎜ 브랜디 클론 프로젝트 후기"
+title: "Django ⎜ Brandi 클론 프로젝트 후기"
 date: 2020-11-29 20:25:00 -0400
 summary: 
 toc : ture

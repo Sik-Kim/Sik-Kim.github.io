@@ -26,17 +26,17 @@ category :
 
 ### 기술 스택
 
-### 공통
+**공통**  
 HTTP  
 Git
 
-### 프론트엔드 (3명)
+**프론트엔드 (3명)**  
 HTML/CSS
 JavaScript  
 React  
 SASS  
 
-### 백엔드 (3명)
+**백엔드 (3명)**  
 Python  
 Django  
 MySQL  
@@ -47,7 +47,7 @@ PyJWT, Bcrypt
 Beautiful soup, Selenium  
 Docker  
 
-### Tool
+**Tool**  
 VSC, Vim  
 Aquerytool  
 Postman  
@@ -68,25 +68,25 @@ Slack
 <br>
 
 # What did I do?
-### 기능 구현
+**기능 구현**  
 - Django를 사용하여 앱 코드 구현
 - 아파트 기간/평수/거래 타입 별 가격, 거래수 변동 그래프 API 구현(직방 기능)
 - Python haversine 모듈을 활용하여 위치정보 기반 주변 시설 필터링 API 구현(다방 기능)
 - 부동산 검색 API 구현(직방 기능)
 - unittest.mock을 활용한 API 별 Unit Test 구현
 
-### 프로젝트 관리
+**프로젝트 관리**  
 - Git, git branch, git rebase, Github를 통한 형상 관리
 - Restful API 규칙에 따른 End-Point 구현
 - AWS EC2, RDS를 사용하여 서버 배포
 - Docker를 활용한 가상화 시스템 적용
 
-### 데이터베이스
+**데이터베이스**  
 - Aquery Tool을 사용하여 ERD Modeling 구축
 - Python csv 모듈을 활용한 Database 구축 및 MySQL 활용
 - Beautiful Soup, Selenium을 사용하여 부동산좌표 데이터 크롤링
 
-### 협업 방식
+**협업 방식**  
 - 직방 클론 프로젝트 PM을 담당하며 프로젝트 관리 및 팀원들과의 협업 경험
 - Agile 방법론 경험 및 Sprint 기간을 1주로 설정하여 프로젝트 관리
 - Trello, Slack을 통한 프로젝트 관리 및 팀원들과의 소통
@@ -98,15 +98,15 @@ Slack
 # Project Review
 
 ### 1. ERD Modeling
-ERD Modeling URL : https://aquerytool.com:443/aquerymain/index/?rurl=6dcce6e9-95f0-4f75-b71c-4232ac16e0cd& (Password : rawjqt)
+[ERD Modeling URL](https://aquerytool.com:443/aquerymain/index/?rurl=6dcce6e9-95f0-4f75-b71c-4232ac16e0cd&) (Password : rawjqt)
 
 백엔드의 시작은 모델을 정의하고 관계를 지정하는 ERD Modeling인게 확실하다. 모호하기만 했던 지도 프로젝트도 ERD Modeling을 작성하고 나니 한 줄기 빛이 보였다. 아.. 이렇게 하면 되는구나.  
 지도 API를 이용해서 지도를 사용했을 뿐이지 개발에 있어서 본질은 이커머스와 크게 다를 게 없었다. 모델 구조를 파악하고, API 기능을 나누고, 데이터를 구축하고...  
 2차 프로젝트를 하며 더더욱 어떤 웹사이트든지 시간이 오래 걸릴지는 몰라도 어떻게든 할 수는 있겠구나 생각이 들었다.
 
 **모델링 작성 중 고민한 내용**  
-- Apartment와 Room 특성이 비슷해서 모델을 합칠 수 있을까 고민도 했었다. 하지만 알고보니 비슷해 보이지만 완전히 달라서 무조건 모델을 나누는 게 맞았다.
-- Facility app(보라색)은 다른 App과의 관계가 연결되어 있지 않다. 관계가 없을 수도 있나? 처음에 되게 이상했는데 이런 경우도 있을 수 있는 걸 알게 됐다.
+Apartment와 Room 특성이 비슷해서 모델을 합칠 수 있을까 고민도 했었다. 하지만 알고보니 비슷해 보이지만 완전히 달라서 무조건 모델을 나누는 게 맞았다.  
+Facility app(보라색)은 다른 App과의 관계가 연결되어 있지 않다. 관계가 없을 수도 있나? 처음에 되게 이상했는데 이런 경우도 있을 수 있는 걸 알게 됐다.
 
 ![erd modeling](https://i.ibb.co/njdv301/modeling.png)
 
@@ -317,6 +317,7 @@ PM이 되었을 때 뭐 별거 있겠어 생각했지만 긴장되고 불안한 
 ### 프로젝트 발표 전 난리의 현장
 발표준비를 끝마쳤는데 발표 3분 전 갑자기 아파트 지도 화면이 열리지 않는 것이었다. 응?
 팀원들 모두가 그야말로 멘붕에 빠졌다.
+
 ![menbung](https://i.ibb.co/9ThWVTk/menbung.png)
 
 양해를 구하고 발표를 한 차례 밀고 모두가 필사적으로 에러 찾기에 나섰다. 

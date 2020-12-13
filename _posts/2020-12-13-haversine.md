@@ -54,8 +54,8 @@ haversine(lyon, paris, unit=Unit.NAUTICAL_MILES)
 <br><br>
 
 ### 실제 응용
-아래는 직방 프로젝트에서 부동산 주변 편의시설을 찾는 API의 일부분이다.  
-다 볼 필요없이 아래 haversine 부분만 참고하면 된다.  
+아래는 직방 클론 프로젝트에서 작성했던 부동산 주변 편의시설을 찾는 API의 일부분이다.  
+다 볼 필요없이 가장 아래줄 haversine 부분만 참고하면 된다.  
 haversine 값이 5km 이내인 school을 모두 찾아 near_schools이란 변수에 저장했다.
 이렇게 좌표값에 따른 거리가 필요할 때 haversine을 활용할 수 있다.
 
@@ -82,8 +82,8 @@ haversine 값이 5km 이내인 school을 모두 찾아 near_schools이란 변수
 
 ### 위도, 경도 용어
 용어가 매번 헷갈려서 정리했다.
-1. latitude = 위도 = Y방향, 북/남 방향 = 서울(약 37.5)
-2. longitude = 경도 = X방향, 동/서 방향 = 서울(약 127.0)
+1. latitude - 위도 - Y방향, 북/남 방향 - 서울(약 37.5)
+2. longitude - 경도 - X방향, 동/서 방향 - 서울(약 127.0)
 
 <br>
 

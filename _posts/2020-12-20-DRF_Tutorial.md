@@ -26,7 +26,7 @@ DRF Tutorial은 단계는 1부터 6까지 있다.
 
 <br>
 
-# Tutorial 1 : Serialization
+# Tutorial 1 : Serialization - (1)
 
 ## Serializer란?
 > 직렬화(直列化) 또는 시리얼라이제이션(serialization)은 컴퓨터 과학의 데이터 스토리지 문맥에서 데이터 구조나 오브젝트 상태를 동일하거나 다른 컴퓨터 환경에 저장(이를테면 파일이나 메모리 버퍼에서, 또는 네트워크 연결 링크 간 전송)하고 나중에 재구성할 수 있는 포맷으로 변환하는 과정이다. - 위키백과 -
@@ -47,7 +47,7 @@ Serializer Class를 정의할 때 기본적인 기능을 수행하는 method로�
 <br>
 
 ```python
-# in models.py
+# models.py
 class Snippet(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, blank=True, default='')
@@ -66,7 +66,7 @@ class Snippet(models.Model):
 <br>
 
 ```python
-# in serializers.py (Serializer 메소드 사용)
+# serializers.py (Serializer 메소드 사용)
 from rest_framework import serializers
 from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 class SnippetSerializer(serializers.Serializer):
@@ -81,7 +81,7 @@ class SnippetSerializer(serializers.Serializer):
 <br>
 
 ```python
-# in serializers.py (ModelSerializer 메소드 사용)
+# serializers.py (ModelSerializer 메소드 사용)
 from rest_framework import serializers
 from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 class SnippetSerializer(serializers.ModelSerializer):

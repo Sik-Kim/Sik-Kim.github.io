@@ -69,6 +69,9 @@ class SnippetSerializer(serializers.Serializer):
 
 <br>
 
+다른 부분은 제외하고 json, stream 부분만 참고해도 된다.  
+Serialization과 Deserialization 하는 과정이다.
+
 ```python
 # views.py
 from django.http import request, JsonResponse
@@ -136,8 +139,6 @@ class TestView(APIView):
 <br>
 
 ### server 화면
-다른 부분은 말고 -----json-----, -----data------ 의 아래 부분만 참고하면 된다.  
-Serialization과 Deserialization 하는 과정이다.
 
 ![server 화면](https://i.ibb.co/W6xnvxq/image.png)
 

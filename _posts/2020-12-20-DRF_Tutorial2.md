@@ -1,5 +1,5 @@
 ---
-title: "Django ⎜ [DRF_TUTORIAL] Serializer vs ModelSerializer"
+title: "Django ⎜ [DRF_TUTORIAL] Serialization & Deserialization"
 date: 2020-12-20 20:25:00 -0400
 summary: 
 toc : ture

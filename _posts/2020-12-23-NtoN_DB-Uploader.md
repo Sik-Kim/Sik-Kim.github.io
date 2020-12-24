@@ -1,6 +1,6 @@
 ---
 title: "Python ⎜ ManyToMany값 csv로 database 입력하기"
-date: 2020-12-23 20:25:00 -0400
+date: 2020-12-24 01:25:00 -0400
 summary: 
 toc : ture
 toc_sticky: true

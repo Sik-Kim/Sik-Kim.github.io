@@ -1,5 +1,5 @@
 ---
-title: "Python ⎜ 변수 선언이 안되서 List Complihension이 불가 할 떄 - Set Complihension 만들기"
+title: "Python ⎜ 변수 선언이 안되서 List Complihension이 불가 할 때 - Set Complihension 만들기"
 date: 2020-12-23 20:25:00 -0400
 summary: 
 toc : ture

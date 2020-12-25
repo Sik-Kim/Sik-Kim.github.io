@@ -1,5 +1,5 @@
 ---
-title: "Python ⎜ ManyToMany값 csv로 database 입력하기"
+title: "Django ⎜ ManyToMany값 csv로 database 입력하기"
 date: 2020-12-24 01:25:00 -0400
 summary: 
 toc : ture
@@ -9,7 +9,7 @@ tag :
     - python
     - django
 category : 
-    - python
+    - django
 ---
 
 ### ManyToMany값을 넣기 위한 db_uploader는 어떻게 작성하면 될까?

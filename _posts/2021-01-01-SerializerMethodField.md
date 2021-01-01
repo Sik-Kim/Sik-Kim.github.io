@@ -11,7 +11,7 @@ tag :
     - DRF
     - Serializer
 category : 
-    - django
+    - DRF
 ---
 
 ## Intro

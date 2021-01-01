@@ -1,5 +1,5 @@
 ---
-title: "Django ⎜ 여러 Serializer가 있을 때 swagger의 responses 만들기"
+title: "Django ⎜ 여러 Serializer가 response 될 때 swagger의 responses 만들기"
 date: 2021-01-01 01:25:00 -0400
 summary: 
 toc : ture

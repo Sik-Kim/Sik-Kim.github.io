@@ -15,8 +15,8 @@ category :
 ---
 
 ## Intro
-Serialzier를 모를땐 몰랐는데 이제는 Serializer가 없으면 Model을 사용할 때 상당히 불편할 것 같다. Serializer는 본인 필요에 따라 잘 구축하면 아주 편하게 model들을 사용할 수 있다.  
-그렇기에 처음부터 필요한 Model의 조합 전체를 구상하고 Serializer 설계를 하면 좋지 않을까..
+Serialzier를 안써봤을 땐 몰랐는데 이제는 Serializer가 없으면 Model을 사용할 때 상당히 불편할 것 같다. Serializer는 본인 필요에 따라 잘 구축하면 아주 편하게 model들을 사용할 수 있다.  
+그렇기에 처음부터 프로젝트에 필요한 Model의 조합을 전체적으로 구상하고 Serializer 설계를 하면 최적화에 좋지 않을까..
 
 <br>
 

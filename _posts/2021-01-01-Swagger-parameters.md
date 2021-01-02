@@ -1,6 +1,6 @@
 ---
 title: "Django ⎜ Swagger의 parameters(query string)값 만드는 2가지 방법"
-date: 2021-01-01 01:25:00 -0400
+date: 2021-01-01 01:50:00 -0400
 summary: 
 toc : ture
 toc_sticky: true

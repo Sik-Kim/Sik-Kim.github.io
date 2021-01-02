@@ -1,5 +1,5 @@
 ---
-title: "Django ⎜ MethodSerializerField()로 역참조 Model을 Serializer 필드에 추가하기"
+title: "Django ⎜ MethodSerializerField()를 사용하여 역참조 Model Serializer 추가하기"
 date: 2021-01-01 01:25:00 -0400
 summary: 
 toc : ture

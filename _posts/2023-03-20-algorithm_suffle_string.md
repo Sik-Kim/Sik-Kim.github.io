@@ -14,6 +14,8 @@ category:
 
 ## 문제
 
+[문제 링크](https://leetcode.com/problems/shuffle-string)
+
 ![image](https://user-images.githubusercontent.com/63498876/226405914-995c1dd2-410f-4858-ab8a-042e424e249f.png)
 
 <br>

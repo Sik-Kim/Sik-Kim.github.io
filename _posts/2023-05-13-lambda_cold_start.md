@@ -25,8 +25,7 @@ category:
 
 서버리스도 사실은 서버다. <br>
 
-편의점으로 비교해보자. <br>
-일반 서버에는 직원이 24시간 항상 대기하고 있지만 서버리스는 손님이 왔을 때만 잠깐 직원이 출근해서 대응하는 방식이다. <br>
+편의점으로 비교해보면 일반 서버에는 직원이 24시간 항상 대기하고 있지만 서버리스는 손님이 왔을 때만 직원이 잠깐 출근해서 대응하는 방식이다. <br>
 여기서 직원이 잠깐 출근할 때 드는 시간이 콜드 스타트이다. <br>
 즉 람다를 실행하기 위해 AWS에서 관리하는 서버가 부팅되는 시간이다. <br>
 
@@ -41,8 +40,8 @@ category:
 
 아래는 람다 2개가 결합된 한 api를 테스트 했을 때 속도이다. <br>
 
--   1초 간격으로 람다 실행: 2.72s -> 1.21s -> 0.75s -> 0.1s
--   10초 간격으로 람다 실행: 2.75s -> 1.81s -> 1.6s -> 1.1s -> 0.7s -> 0.4s -> 0.1s
+-   <span style="font-size:12px;">1초 간격으로 람다 실행: 2.72s -> 1.21s -> 0.75s -> 0.1s</span>
+-   <span style="font-size:12px;">10초 간격으로 람다 실행: 2.75s -> 1.81s -> 1.6s -> 1.1s -> 0.7s -> 0.4s -> 0.1s</span>
 
 0.1s 일때가 콜드 스타트가 완전히 없고 오로지 람다 코드만 실행된 상태이다. <br>
 이처럼 콜드 스타트는 한번에 없어지는게 아니고 점차 줄어드는 방식이고 요청 간격에 따라 줄어드는 속도도 다르다. <br>
@@ -57,24 +56,24 @@ https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at
 
 간단히 정리하면 아래와 같다. <br>
 
-1. **provisioned concurrency (동시성 구성)** <br>
+1. provisioned concurrency (동시성 구성) <br>
    : 람다를 계속해서 워밍업을 시켜주는 서비스이다. 우리 서비스의 경우 추가비용이 많이 발생될 것으로 보여 사용하지 않았다.
-2. **language choice (개발 언어 선택)** <br>
+2. language choice (개발 언어 선택) <br>
    : 언어에 따라 람다 속도차이가 있는데 람다에 적합한 typescript를 사용했다.
-3. **improve performance to reduce** <br>
+3. improve performance to reduce <br>
    : 람다에 설정한 메모리 값에 따라 람다의 컴퓨팅 CPU 값이 정해진다. 비용을 고려해서 최대한 scale-up 했다.
-4. **initialization code (초기화 코드 최적화)** <br>
+4. initialization code (초기화 코드 최적화) <br>
    : 리팩토링을 진행하며 초기화를 위한 로직은 핸들러 외부인 초기화 코드로 적용했다.
-5. **package size (람다 용량)** <br>
+5. package size (람다 용량) <br>
    : 모든 람다를 inline으로만 적용해서 용량은 충분히 작았다.
 
 5가지 사항 중 2~5번은 모두 충분한 수준으로 반영했지만... 결과는 크게 나아지지 않았다.
 
 <br>
 
-<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/3e4b5b11-76aa-4341-83e6-fc91c407d23f" width="35%" height="35%">
+<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/3e4b5b11-76aa-4341-83e6-fc91c407d23f" width="50%" height="50%">
 
-<br><br>
+<br>
 
 ## 실제로 효과가 있었던 3가지 방법
 
@@ -85,8 +84,6 @@ https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at
     2. Gateway의 Authorizer 대신 Lambda Layer 사용
     3. Event Bridge를 활용한 워밍업
 
-<br>
-
 ### 1. 람다 합치기
 
 람다를 합친다는건 별도로 생성된 람다들을 하나의 람다로 합친다는 의미이다. <br>
@@ -96,7 +93,7 @@ https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at
 
 <br>
 
-<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/ca4d931b-de08-4c41-aba3-d6233e47d87b" width="40%" height="40%">
+<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/ca4d931b-de08-4c41-aba3-d6233e47d87b" width="50%" height="50%">
 
 <br>
 
@@ -112,8 +109,6 @@ https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at
 
 두 번째로 기존에는 모든 api를 gateway에서 라우팅을 해줬었는데 람다를 합치면서 람다 내에서 라우팅 해주는 코드를 짜야했다. event값의 resource와 method를 이용해서 라우팅을 해줬다.
 
-<br>
-
 ### 2. Gateway의 Authorizer 대신 Lambda Layer 사용
 
 Gateway에는 유저 인가를 위해 AWS가 제공하는 Authorizer 기능을 사용할 수 있다. <br>
@@ -121,20 +116,16 @@ Gateway에는 유저 인가를 위해 AWS가 제공하는 Authorizer 기능을 �
 Authorizer의 캐싱을 이용하면 이를 해결할 수 있지만 Authorizer로 커스텀을 하니 캐싱 기능을 사용할 수 없는 상황이었다. <br>
 즉 인가를 위한 코드는 gateway authorizer 말고 람다 공통 모듈 Layer에 포함시켰다.
 
-<br>
-
 ### 3. Event Bridge를 활용한 워밍업
 
 Event Bridge를 통해 주기적으로 람다를 요청해서 계속 워밍업을 시키는 방법이다.
 provisioned concurrency을 대체하는 방법으로 이 방법을 이용하면 비용을 절약할 수 있다. <br>
 
-<br>
-
 위 3가지 방법을 통해 콜드 스타트 문제는 거의 해결이 됐다.
 
 <br>
 
-<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/c8648284-e50e-4add-8930-62a2ec932169" width="35%" height="35%">
+<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/c8648284-e50e-4add-8930-62a2ec932169" width="50%" height="50%">
 
 <br><br>
 

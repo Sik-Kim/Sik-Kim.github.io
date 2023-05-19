@@ -18,7 +18,7 @@ category:
 여러가지 시도 끝에 서비스에 최적인 방법을 결국 찾았는데 지오해시를 이용한 방법이다. <br>
 이는 개발이 그렇게 어렵지 않고 빠르며 데이터 관리도 효율적이다.
 
-<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/111c9a45-8955-4eda-bbd4-41bf3efadc8e" width="50%" height="50%">
+<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/111c9a45-8955-4eda-bbd4-41bf3efadc8e" width="100%" height="100%">
 
 <br>
 
@@ -35,7 +35,7 @@ category:
 지오해시는 위치를 값으로 표시하는 방법이다. <br>
 위치를 어떻게 구분할지나 어떤 값을 부여할지는 개발 상황에 따라 다를 것이다.
 
-<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/c2a7edc4-0010-4be9-a7f1-6b2499e116ab" width="50%" height="50%">
+<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/c2a7edc4-0010-4be9-a7f1-6b2499e116ab" width="100%" height="100%">
 
  <br>
 
@@ -50,7 +50,7 @@ category:
 즉 4등분을 한번씩 할 때마다 지오해시값이 1자리씩 증가하게 된다. <br>
 난 이런식으로 전국에 4등분을 총 15번해서 15자리의 지오해시 값을 만들었다. <br>
 
-<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/7cb429d3-51b6-443f-b8fd-4fe1c0fbac6a" width="50%" height="50%">
+<img src="https://github.com/Sik-Kim/Sik-Kim.github.io/assets/63498876/7cb429d3-51b6-443f-b8fd-4fe1c0fbac6a" width="100%" height="100%">
 
  <br>
 

@@ -52,7 +52,7 @@ category:
 # 콜드 스타트 해결하기
 
 먼저 아래 링크는 콜드 스타트를 해결하는 5가지 방법에 대한 글이다. <br>
-https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at-postnl-915e62401457
+[https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at-postnl-915e62401457](https://medium.com/postnl-engineering/the-5-ways-we-reduce-lambda-cold-starts-at-postnl-915e62401457)
 
 간단히 정리하면 아래와 같다. <br>
 
@@ -118,8 +118,9 @@ Authorizer의 캐싱을 이용하면 이를 해결할 수 있지만 Authorizer�
 
 ### 3. Event Bridge를 활용한 워밍업
 
-Event Bridge를 통해 주기적으로 람다를 요청해서 계속 워밍업을 시키는 방법이다.
-provisioned concurrency을 대체하는 방법으로 이 방법을 이용하면 비용을 절약할 수 있다. <br>
+Event Bridge의 Scheduler를 통해 주기적으로 람다를 계속 워밍업 시키는 방법이다.
+provisioned concurrency을 대체하는 방법으로 볼 수 있으며 비용을 상당히 절약할 수 있다. <br>
+모든 람다에 스케쥴러를 붙이진 않았고 주요 람다에만 설정해줬다.
 
 위 3가지 방법을 통해 콜드 스타트 문제는 거의 해결이 됐다.
 

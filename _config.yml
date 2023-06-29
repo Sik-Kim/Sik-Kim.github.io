@@ -266,7 +266,8 @@ defaults:
       values:
           layout: single
           author_profile: true
-          read_time: true
+          read_time: false # NOTE: 사용 안함
+          show_date: true # NOTE: 날짜 표시 추가
           comments: true
           share: true
           related: true

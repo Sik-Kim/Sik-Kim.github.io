@@ -42,9 +42,9 @@ category:
 
 **문제 2. 성능 이슈** <br>
 모든 의원정보를 각각 취급하기에 db에서 불러오고 렌더링 하는 과정에서 시간이 오래 걸렸다. <br>
-<span style="color: red;">**-> _클러스터링은 대량의 데이터를 그룹화해서 가져오기에 응답속도가 훨씬 빠름 <br> 기존의 방식은 데이터양에 비례해서 속도가 느려졌지만 클러스터링은 대량의 데이터도 성능이 뛰어남_**</span> <br>
-<span style="color: red;">**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* _200개 기준: 0.8s -> 0.15s_**</span> <br>
-<span style="color: red;">**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* _5000개 기준: 5s -> 0.2s_**</span> <br>
+<span style="color: red;">**-> _클러스터링은 대량의 데이터를 그룹화해서 가져오기에 응답속도가 훨씬 빠름 <br> 기존의 방식은 데이터양에 비례해서 속도가 느려졌지만 클러스터링은 대량의 데이터에도 성능이 뛰어남_**</span> <br>
+<span style="color: red;">**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* _200개 기준 속도 개선: 0.8s -> 0.15s_**</span> <br>
+<span style="color: red;">**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\* _5000개 기준 속도 개선: 5s -> 0.2s_**</span> <br>
 
 **문제 3. 분포 및 밀도 데이터 불충분** <br>
 개수 제한이 있다보니 지도 서비스에 필요한 의원의 공간적 분포와 밀도를 이해하기 어려웠다. <br>
